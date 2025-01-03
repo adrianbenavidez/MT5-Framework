@@ -1,0 +1,22 @@
+/---------Instalacion Inicial---------/
+1 - Instalar Anaconda
+2 - Ingresar a Anaconda Promnt
+3 - Crear un entorno virtual: conda create -y --name mt5python python=3.11
+4 - Consultar todos los entorno virtuales: conda env list
+5 - Activar el entorno virtual: conda activate mt5python
+6 - Desactivar el entorno virtual: conda deactivate
+7 - Instalar requirements.txt: pip install -r requirements.txt
+8 - Crear un archivo en el directorio raiz del proyecto Prueba.ipynb e instalar el ipykernel
+
+/---------Modulo: Platform Connector---------/
+1 - Explorar métodos de MT5 API
+2 - Credenciales en .env (librería python-dotenv)
+3 - Lanzar plataforma MT5 desde Python
+4 - Warning si la cuenta es LIVE (capital real)
+5 - Algo trading activado
+6 - Anadir símbolos al MarketWatch
+7 - Mostrar info de la cuenta
+
+* Consultar la web oficial para integrar MT5 y python https://www.mql5.com/es/docs/python_metatrader5
+
+
