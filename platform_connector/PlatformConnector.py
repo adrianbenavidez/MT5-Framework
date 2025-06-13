@@ -8,7 +8,7 @@ class PlatformConnector():
     def __init__(self, symbol_list: list):
 
         # Buscamos el archivo .env y cargamos sus valores
-        load_dotenv(find_dotenv())
+        load_dotenv(find_dotenv(), override=True)
 
         # Inicialización de la plataforma
         self._initialize_platform()
@@ -45,7 +45,12 @@ class PlatformConnector():
             print("La plataforma MT5 se ha lanzado con éxito!!!")
         else:
             raise Exception(
-                f"Ha ocurrido un error al lanzar la plataforma MT5: {mt5.last_error()}")
+                f"""Ha ocurrido un error al lanzar la plataforma MT5: {mt5.last_error()}
+                Valores usados:
+                PATH={os.getenv("MT5_PATH")}
+                LOGIN={int(os.getenv("MT5_LOGIN"))}
+                PASSWORD={os.getenv("MT5_PASSWORD")}
+                """)
 
     def _live_account_warning(self) -> None:
 

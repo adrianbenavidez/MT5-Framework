@@ -6,8 +6,8 @@ import pandas as pd
 
 
 class Event(str, Enum):
-    DATA: "DATA"
-    SIGNAL: "SIGNAL"
+    DATA = "DATA"
+    SIGNAL = "SIGNAL"
 
 
 class BaseEvent(BaseModel):
