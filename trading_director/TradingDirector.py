@@ -24,8 +24,7 @@ class TradingDirector():
 
     def _handle_data_event(self, event: Event):
         # Aquí dentro gestionamos los eventos de tipo Event
-        print(
-            f"Recibidos nuevos datos de {event.symbol} - ultimo precio: {event.data.close}")
+        print(f"{event.data.name} - Recibidos nuevos datos de {event.symbol} - ultimo precio: {event.data.close}")
 
     def execute(self) -> None:
         # Definición del bucle principal
